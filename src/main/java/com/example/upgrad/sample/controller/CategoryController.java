@@ -42,6 +42,9 @@ public class CategoryController {
 			.orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 			 
 	}
+	//localhost:8080/api/category	POST request
+	//localhost:8080/api/category	GET request
+	//localhost:8080/api/category	Delete request
 	@PostMapping("/category")
 	ResponseEntity<Category> createCategory(@Valid @RequestBody Category category) throws URISyntaxException{
 	  Category result= categoryRepository.save(category);
